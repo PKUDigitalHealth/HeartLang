@@ -1,0 +1,10 @@
+.vscode
+__pycache__/
+
+checkpoints/*
+!checkpoints/.gitkeep
+
+datasets/ecg_datasets/*
+!datasets/ecg_datasets/.gitkeep
+
+logs
