@@ -216,15 +216,13 @@ For the CPSC2018 and CSN datasets, the fine-tuning training and testing processe
 ## References
 
 If you found our work useful in your research, please consider citing our works at:
-
 > ```
 > @inproceedings{
-> anonymous2024reading,
+> jin2025reading,
 > title={Reading Your Heart: Learning {ECG} Words and Sentences via Pre-training {ECG} Language Model},
-> author={Anonymous},
-> booktitle={Submitted to The Thirteenth International Conference on Learning Representations},
-> year={2024},
+> author={Jiarui Jin and Haoyu Wang and Hongyan Li and Jun Li and Jiahui Pan and Shenda Hong},
+> booktitle={The Thirteenth International Conference on Learning Representations},
+> year={2025},
 > url={https://openreview.net/forum?id=6Hz1Ko087B},
-> note={under review}
 > }
 > ```
