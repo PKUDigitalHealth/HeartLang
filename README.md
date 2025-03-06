@@ -135,7 +135,7 @@ The data processing code for each downstream dataset is located in the `datasets
 
 The following example demonstrates the process using the PTB-XL dataset:
 
-First, create a folder named `PTBXL` under the `datasets/ecg_datasets` directory, and copy and paste all subsets folders into it. At this point, the folder structure will be similar to the following:
+First, run `datasets/dataset_preprocess/PTBXL/ecg_ptbxl_benchmarking/code/reproduce_results.py` to obtain all subset files. At this point, the folder structure will be similar to the following:
 
 ```
 datasets/
