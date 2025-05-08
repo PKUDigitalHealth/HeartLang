@@ -23,20 +23,10 @@ class QRSTokenizer(nn.Module):
         self.used_chans = used_chans
 
     def qrs_detection(self, ecg_signal):
-        channels, _ = ecg_signal.shape
-        all_qrs_inds = []
+        lead_signal = ecg_signal[0, :]
+        qrs_inds = processing.xqrs_detect(sig=lead_signal, fs=self.fs, verbose=False)
 
-        for channel_index in range(channels):
-            lead_signal = ecg_signal[channel_index, :]
-            qrs_inds = processing.xqrs_detect(
-                sig=lead_signal, fs=self.fs, verbose=False
-            )
-            all_qrs_inds.append(qrs_inds)
-
-        # lead_signal = ecg_signal[0, :]
-        # qrs_inds = processing.xqrs_detect(sig=lead_signal, fs=self.fs, verbose=False)
-
-        return all_qrs_inds
+        return qrs_inds
 
     def extract_qrs_segments(self, ecg_signal, qrs_inds):
         channels, _ = ecg_signal.shape
