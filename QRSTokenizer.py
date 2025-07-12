@@ -270,7 +270,7 @@ if __name__ == "__main__":
             data_path = (
                 f"./datasets/ecg_datasets/{dataset_name}/{category}/{type_}_data.npy"
             )
-            save_path = f"./datasets/ecg_datasets/{dataset_name}_QRS_{len(used_channels)}Leads/{category}/"
+            save_path = f"./datasets/ecg_datasets/{dataset_name}_QRS/{category}/"
 
             if not os.path.exists(os.path.dirname(save_path)):
                 os.makedirs(os.path.dirname(save_path))

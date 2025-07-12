@@ -1,10 +1,13 @@
 import os
 import shutil
 
-# 定义要处理的根目录
-root_dir = "/hot_data/jinjiarui/run/HeartLang/datasets/ecg_datasets/PTBXL"
+script_file_path = os.path.abspath(__file__)
+script_dir = os.path.dirname(script_file_path)
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
+root_dir = os.path.join(project_root, "datasets", "ecg_datasets", "PTBXL")
 
-# 定义需要处理的子目录列表
+print(f"Calculated absolute root directory: {root_dir}")
+
 subdirs = ["all", "diagnostic", "form", "rhythm", "subdiagnostic", "superdiagnostic"]
 
 for subdir in subdirs:
